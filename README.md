@@ -4,10 +4,9 @@
   </a>
 </p>
 
-# Pantone Challenge
+# DDD Nestjs Boilerplate
 
 ## Tempo que foi gasto no desenvolvimento
-
 
 [Arquitetura](./architecture.md)
 
@@ -43,14 +42,14 @@
 1. Clone the repository
 
 ```bash
-git clone git@github.com:williamkoller/pantone-challenge.git
+git clone git@github.com:williamkoller/ddd-nestjs-boilerplategit
 ```
 
 2. Access the project folder
 
 ```bash
 
-cd git@github.com:williamkoller/pantone-challenge.git
+cd git@github.com:williamkoller/ddd-nestjs-boilerplategit
 ```
 
 3. Install the dependencies
