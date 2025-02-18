@@ -77,10 +77,10 @@ http://localhost:3003/api/swagger
 npm run test
 ```
 
-7. Se quiser entrar no container `web-api`
+7. Se quiser entrar no container `ddd-api`
 
 ```bash
-docker exec -it web-api sh
+docker exec -it ddd-api sh
 ```
 
 8. Se quiser entrar no container `postgres`
@@ -91,12 +91,12 @@ docker exec -it postgres sh
 
 ## Obs
 
-- A migration roda sozinha quando starta o container da `web-api`
+- A migration roda sozinha quando starta o container da `ddd-api`
 
-## Acesse o container `web-api` e rode os comandos abaixo
+## Acesse o container `ddd-api` e rode os comandos abaixo
 
 ```bash
-docker exec -it web-api sh
+docker exec -it ddd-api sh
 ```
 
 ### Para criar uma migation
