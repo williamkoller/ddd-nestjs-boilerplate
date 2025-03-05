@@ -21,7 +21,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "docker:start": "docker-compose down && docker-compose up",
-    "migration:create": "tsc migrations/**/*.ts --outDir build/migrations node build/migrations/migrationsUp.js",
+    "migration:create": "npx ts-node migrations/createMigration.ts",
     "migration:up": "npx ts-node migrations/migrationsUp.ts",
     "migration:down": "npx ts-node migrations/migrationsDown.ts",
     "prepare": "npx husky",
