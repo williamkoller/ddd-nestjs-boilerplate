@@ -1,12 +1,4 @@
-<p align="right">
-  <a href="https://railway.app">
-    <img src="https://railway.app/button.svg" alt="Deploy with Railway">
-  </a>
-</p>
-
 # DDD Nestjs Boilerplate
-
-## Tempo que foi gasto no desenvolvimento
 
 [Arquitetura](./architecture.md)
 
