@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  ddd-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: ddd-api
+    depends_on:
+      - ddd-db
+    entrypoint: sh -c 'npm i && npm run start:dev'
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+      - ddd-api-network
+
+  ddd-db:
+    image: postgis/postgis:16-3.4-alpine
+    container_name: ddd-db
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - ddd-api-network
+
+networks:
+  ddd-api-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

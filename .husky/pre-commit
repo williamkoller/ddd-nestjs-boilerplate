@@ -1,0 +1,14 @@
+#!/bin/sh
+echo "🚀 Running TypeScript check and tests before committing..."
+
+if ! npm run tsc -- --noEmit; then
+  echo "❌ TypeScript errors found! Fix them before committing."
+  exit 1
+fi
+
+if ! npm run test; then
+  echo "❌ Tests failed! Fix them before committing."
+  exit 1
+fi
+
+echo "✅ TypeScript and tests passed! Proceeding with commit..."
