@@ -75,10 +75,10 @@ npm run test
 docker exec -it ddd-api sh
 ```
 
-8. Se quiser entrar no container `postgres`
+8. Se quiser entrar no container `ddd-db`
 
 ```bash
-docker exec -it postgres sh
+docker exec -it ddd-db sh
 ```
 
 ## Obs
